@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Customer Details System</h1>
+	<h2 th:text="'Ratings Given by '+${customerId}"></h2>
+	<table border="1">
+		<tr>
+			<th>Customer Name</th>
+			<th>Rating</th>
+		</tr>
+		<tr th:each="customerDetail : ${customerDetails}">
+			<td th:text="${customerDetail.customerId}"></td>
+			<td th:text="${customerDetail.shareName}"></td>
+			<td th:text="${customerDetail.quantity}"></td>
+			<td th:text="${customerDetail.unitPrice}"></td>
+			<td th:text="${customerDetail.totalValuation}"></td>
+			<td th:text="${customerDetail.shareType}"></td>
+		</tr>
+	</table>
+</body>
+</html>
